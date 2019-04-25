@@ -1,0 +1,14 @@
+<view class="list-page">
+  <view class="list-item {{user.isTouchMove?'list-item-touch-active':''}}" wx:for="{{list}}" wx:for-item="user" wx:for-index="index" wx:key="user.id" bindtouchstart="touchstart" bindtouchmove="touchmove" data-id="{{user.id}}">
+
+    <view class="item-content">
+      <view class="content-name">{{user.name}}</view>
+      <view class="content-info"> 
+        <text>{{user.phone}}</text>
+        <text>{{user.sex}}</text>
+      </view>
+    </view>
+
+    <view class="item-delete">删除</view>
+  </view>
+</view>
